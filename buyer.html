@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Buyer - FarmDirect
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================
+         NAVIGATION
+    ====================================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🌾 FarmDirect
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="farmer.html">
+                Farmer
+            </a>
+
+            <a href="buyer.html">
+                Buyer
+            </a>
+
+            <a href="market.html">
+                Market Trends
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================
+         BUYER DASHBOARD
+    ====================================== -->
+
+    <main class="dashboard">
+
+
+        <h1>
+            🛒 Buyer Dashboard
+        </h1>
+
+
+        <p class="subtitle">
+            Find fresh agricultural products
+            directly from farmers.
+        </p>
+
+
+
+        <!-- =================================
+             SEARCH
+        ================================== -->
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchProduct"
+                placeholder="🔍 Search products..."
+            >
+
+        </div>
+
+
+
+        <!-- =================================
+             AVAILABLE PRODUCTS
+        ================================== -->
+
+        <section class="products-section">
+
+            <h2>
+                Available Products
+            </h2>
+
+
+            <div
+                id="buyerProducts"
+                class="product-grid"
+            >
+
+                <!-- JavaScript products -->
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             MY ORDERS
+        ================================== -->
+
+        <section class="orders-section">
+
+            <h2>
+                📦 My Orders
+            </h2>
+
+
+            <div id="buyerOrders">
+
+                <!-- JavaScript orders -->
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================
+         PLACE ORDER POPUP
+    ====================================== -->
+
+    <div
+        id="quantityModal"
+        class="quantity-modal"
+    >
+
+        <div class="quantity-modal-box">
+
+
+            <button
+                class="close-modal"
+                onclick="closeQuantityModal()"
+            >
+                ×
+            </button>
+
+
+            <div class="modal-icon">
+                🛒
+            </div>
+
+
+            <h2>
+                Place Your Order
+            </h2>
+
+
+            <p id="quantityProductName">
+                Product
+            </p>
+
+
+            <label>
+                Enter Quantity (kg)
+            </label>
+
+
+            <input
+                type="number"
+                id="orderQuantity"
+                placeholder="Enter quantity"
+                min="1"
+            >
+
+
+            <div class="modal-buttons">
+
+
+                <button
+                    class="btn cancel-btn"
+                    onclick="closeQuantityModal()"
+                >
+                    Cancel
+                </button>
+
+
+                <button
+                    class="btn"
+                    onclick="confirmOrder()"
+                >
+                    Confirm Order
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- CANCEL ORDER POPUP -->
+
+<div
+    id="cancelModal"
+    class="quantity-modal"
+>
+
+    <div class="quantity-modal-box">
+
+        <button
+            class="close-modal"
+            onclick="closeCancelModal()"
+        >
+            ×
+        </button>
+
+
+        <div class="modal-icon">
+            ⚠️
+        </div>
+
+
+        <h2>
+            Cancel Order?
+        </h2>
+
+
+        <p id="cancelProductName">
+            Do you want to cancel this order?
+        </p>
+
+
+        <div class="modal-buttons">
+
+            <button
+                class="btn cancel-btn"
+                onclick="closeCancelModal()"
+            >
+                No, Keep Order
+            </button>
+
+
+            <button
+                class="btn"
+                onclick="confirmCancelOrder()"
+            >
+                Yes, Cancel
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer>
+
+        <p>
+            © 2026 FarmDirect
+        </p>
+
+    </footer>
+
+
+
+    <!-- =====================================
+         JAVASCRIPT
+    ====================================== -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
